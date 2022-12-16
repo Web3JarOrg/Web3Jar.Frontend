@@ -1,0 +1,53 @@
+@use "../../styles/variables" as v;
+
+.nav {
+  width: 100%;
+  height: 80px;
+  //padding: 24px 154px;
+  padding: v.$page-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: v.$bg-secondary;
+  margin-bottom: 50px;
+
+  * {
+    text-decoration: none;
+  }
+
+  .navLinks {
+    display: flex;
+    gap: 60px;
+
+    p {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+
+      &:hover {
+        color: #fa5255;
+      }
+    }
+
+    .activePage {
+      p {
+        color: #fa5255;
+      }
+    }
+  }
+
+  /*.walletButton {
+    background: #8987ff;
+    min-width: 170px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+
+    &:hover {
+      background: #8987ffda;
+    }
+  }*/
+}

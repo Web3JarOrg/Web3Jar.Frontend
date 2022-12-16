@@ -1,0 +1,19 @@
+@use "../../styles/variables" as v;
+
+.createJar {
+  padding: v.$page-padding;
+  height: 100vh;
+
+  .alertWrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .alert {
+      font-size: 64px;
+      color: #fff;
+    }
+  }
+}

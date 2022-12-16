@@ -1,0 +1,39 @@
+@use "../../styles/variables" as v;
+
+.account {
+  width: 200px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 2px solid #8987ff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    width: 200px;
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 0 0 8px 8px;
+    border: 2px solid #8987ff;
+    border-top: none;
+    position: absolute;
+    left: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$bg-secondary;
+  }
+}
