@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import MetamaskProvider from "./components/MetamaskProvider";
 import RenderRoutes from "./routes/RenderRoutes";
 
+import "./styles/main.scss";
+
 const App: FC = () => {
   const getLibrary = (
     provider:

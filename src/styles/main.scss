@@ -1,0 +1,40 @@
+@use "variables" as v;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: v.$font-family-main;
+  color: v.$text-color-main;
+}
+
+body {
+  max-height: 100%;
+  max-width: 100%;
+  background: v.$bg-main;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.walletButton {
+  background: #8987ff;
+  width: 170px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+
+  &:hover {
+    background: #8987ffda;
+  }
+}
