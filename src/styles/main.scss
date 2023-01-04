@@ -1,4 +1,5 @@
 @use "variables" as v;
+@import './scrollbar';
 
 * {
   padding: 0;
@@ -12,6 +13,7 @@ body {
   max-height: 100%;
   max-width: 100%;
   background: v.$bg-main;
+  @include scrollbar;
 }
 
 button,
