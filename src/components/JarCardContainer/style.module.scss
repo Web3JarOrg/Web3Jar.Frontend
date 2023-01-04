@@ -1,0 +1,20 @@
+@import "../../styles/scrollbar";
+@import "../../styles/breakpoints";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px 20px;
+
+  margin-bottom: 50px;
+
+  @include scrollbar;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xl {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

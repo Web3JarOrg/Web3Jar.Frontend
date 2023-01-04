@@ -1,0 +1,11 @@
+.alertWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .alert {
+    font-size: 64px;
+    color: #fff;
+  }
+}
