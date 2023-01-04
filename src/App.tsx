@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import MetamaskProvider from "./components/MetamaskProvider";
+import ReduxProvider from "./providers/ReduxProvider";
 import RenderRoutes from "./routes/RenderRoutes";
 
 import "./styles/main.scss";
@@ -18,13 +19,15 @@ const App: FC = () => {
   };
 
   return (
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <MetamaskProvider>
-        <BrowserRouter>
-          <RenderRoutes />
-        </BrowserRouter>
-      </MetamaskProvider>
-    </Web3ReactProvider>
+    <ReduxProvider>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <MetamaskProvider>
+          <BrowserRouter>
+            <RenderRoutes />
+          </BrowserRouter>
+        </MetamaskProvider>
+      </Web3ReactProvider>
+    </ReduxProvider>
   );
 };
 
