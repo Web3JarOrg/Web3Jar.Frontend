@@ -1,0 +1,19 @@
+@import "./breakpoints";
+
+@mixin scrollbar {
+  overflow-y: auto;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+}
