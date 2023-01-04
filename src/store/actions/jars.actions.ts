@@ -19,7 +19,7 @@ export type JarType = {
 const getJars = async (): Promise<Web3Jar[]> => {
   const web3JarFactoryContract: Web3JarFactory = useContract(
     WEB3_JAR_FACTORY_ADDRESS,
-    "Web3JarFactory"
+    ContractNames.WEB3_JAR_FACTORY
   );
   const allJarsAddresses = await web3JarFactoryContract.getAllJars();
   return allJarsAddresses.map(
