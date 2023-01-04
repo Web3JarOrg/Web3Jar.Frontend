@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Web3Jar.Frontend/static/css/main.6297686b.css",
+    "main.js": "/Web3Jar.Frontend/static/js/main.3d701b1d.js",
+    "index.html": "/Web3Jar.Frontend/index.html",
+    "main.6297686b.css.map": "/Web3Jar.Frontend/static/css/main.6297686b.css.map",
+    "main.3d701b1d.js.map": "/Web3Jar.Frontend/static/js/main.3d701b1d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6297686b.css",
+    "static/js/main.3d701b1d.js"
+  ]
+}
