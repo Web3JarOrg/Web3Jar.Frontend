@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 import { jarsReducer } from "./reducers/jars.reducer";
+import { loaderReducer } from "./reducers/loader.reducer";
 
 const rootReducer = combineReducers({
   jars: jarsReducer,
+  loader: loaderReducer,
 });
 
 export const store = configureStore({
