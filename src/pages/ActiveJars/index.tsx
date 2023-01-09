@@ -6,49 +6,39 @@ import Alert from "../../components/Alert";
 import JarCard from "../../components/JarCard";
 import JarCardContainer from "../../components/JarCardContainer";
 import SearchBar from "../../components/SearchBar";
-import useWallet from "../../hooks/useWallet";
-import { getAllJarsData, JarType } from "../../store/actions/jars.actions";
-import { useAppDispatch } from "../../store/hooks";
+import { JarType } from "../../store/actions/jars.actions";
+import { useJars } from "../../store/hooks";
 
 const ActiveJars: FC = () => {
-  const dispatch = useAppDispatch();
-  const { account } = useWallet();
-  const [activeJars, setActiveJars] = useState<JarType[]>();
+  const jars = useJars();
+  const [searchableValue, setSearchableValue] = useState<string>("");
+  const [filteredJars, setFilteredJars] = useState<JarType[]>();
 
   useEffect(() => {
-    dispatch(getAllJarsData())
-      .unwrap()
-      .then((jars) => {
-        const activeJars = jars.filter((j) => j.isActive);
-        setActiveJars(activeJars);
-      })
-      .catch((e) => console.log(e));
-  }, [account, dispatch]);
-  /*const mockJars = [
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-          { address: "123" },
-        ];*/
+    const activeJars = jars.filter((j) => j.isActive);
+    const res = activeJars.filter((a) => {
+      if (!searchableValue) return true;
+      return (
+        a.jarName.toLowerCase().includes(searchableValue.toLowerCase()) ||
+        a.address.toLowerCase().includes(searchableValue.toLowerCase())
+      );
+    });
+
+    setFilteredJars(res);
+  }, [searchableValue, jars]);
+
   return (
     <div className={styles.activeJars}>
-      {activeJars && activeJars.length ? (
-        <>
-          <SearchBar />
-          <JarCardContainer>
-            {activeJars.map((jar) => (
-              <JarCard address={jar.address} key={jar.address} />
-            ))}
-          </JarCardContainer>
-        </>
+      <SearchBar
+        setSearchableValue={setSearchableValue}
+        searchableValue={searchableValue}
+      />
+      {filteredJars?.length ? (
+        <JarCardContainer>
+          {filteredJars.map((jar) => (
+            <JarCard address={jar.address} key={jar.address} />
+          ))}
+        </JarCardContainer>
       ) : (
         <Alert text={"No active jars found"} />
       )}
@@ -57,5 +47,3 @@ const ActiveJars: FC = () => {
 };
 
 export default ActiveJars;
-
-// @todo add loader here and on myjar page
