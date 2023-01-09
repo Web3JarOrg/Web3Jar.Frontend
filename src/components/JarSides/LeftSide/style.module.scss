@@ -1,0 +1,64 @@
+.leftSide {
+  background-color: #f3f4f6;
+  width: 50%;
+  text-align: center;
+
+  .title {
+    margin: 30px 0 45px 0;
+    text-transform: uppercase;
+  }
+
+  .fundraisingInfo {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    .owner {
+      font-size: smaller;
+      font-weight: bold;
+    }
+
+    .jarName {
+
+    }
+  }
+
+  .statsContainer {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+
+    .verticalLine {
+      border-left: 1px solid gray;
+      height: 50px;
+    }
+
+    .statsSide {
+      width: 45%;
+      display: flex;
+
+      .data {
+        margin-left: 1rem;
+
+        .label,
+        .value {
+          margin: 0;
+          text-align: left;
+          font-weight: bold;
+        }
+
+        .label {
+          color: gray;
+          font-weight: lighter;
+          margin-bottom: 7px;
+        }
+      }
+    }
+  }
+}
