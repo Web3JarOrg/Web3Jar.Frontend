@@ -8,19 +8,19 @@ import MyJars from "../pages/MyJars";
 
 export const ROUTES_CONFIG: RouteObject[] = [
   {
-    path: "/",
+    path: "Web3Jar.Frontend",
     element: <ActiveJars />,
   },
   {
-    path: "/my-jars",
+    path: "Web3Jar.Frontend/my-jars",
     element: <MyJars />,
   },
   {
-    path: "/jar/:address",
+    path: "Web3Jar.Frontend/jar/:address",
     element: <Jar />,
   },
   {
-    path: "/create-jar",
+    path: "Web3Jar.Frontend/create-jar",
     element: <CreateJar />,
   },
 ];

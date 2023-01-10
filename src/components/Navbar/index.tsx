@@ -11,25 +11,25 @@ const Navbar: FC = () => {
 
     return (
         <nav className={styles.nav}>
-            <NavLink to={"/"} end>
+            <NavLink to={"Web3Jar.Frontend"} end>
                 <h4>web3jar 💵🫙</h4>
             </NavLink>
             <div className={styles.navLinks}>
                 <NavLink
-                    to={"/"}
+                    to={"Web3Jar.Frontend"}
                     end
                     className={({ isActive }) => (isActive ? styles.activePage : "")}
                 >
                     <p>Active Jars</p>
                 </NavLink>
                 <NavLink
-                    to={"/my-jars"}
+                    to={"Web3Jar.Frontend/my-jars"}
                     className={({ isActive }) => (isActive ? styles.activePage : "")}
                 >
                     <p>My Jars</p>
                 </NavLink>
                 <NavLink
-                    to={"/create-jar"}
+                    to={"Web3Jar.Frontend/create-jar"}
                     className={({ isActive }) => (isActive ? styles.activePage : "")}
                 >
                     <p>Create Jar</p>

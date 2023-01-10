@@ -47,7 +47,7 @@ const JarCard: FC<IJarCardProps> = ({ address }) => {
 
   return (
     <div className={styles.jarCard}>
-      <NavLink className={styles.navLink} to={`/jar/${address}`}>
+      <NavLink className={styles.navLink} to={`Web3Jar.Frontend/jar/${address}`}>
         <div className={styles.contentWrapper}>
           <h2 className={styles.name}>🫙 {jar?.jarName}</h2>
           <div className={styles.descriptionContainer}>
