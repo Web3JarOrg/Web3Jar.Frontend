@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Web3Jar.Frontend/static/css/main.1e070bcb.css",
-    "main.js": "/Web3Jar.Frontend/static/js/main.5932e751.js",
+    "main.js": "/Web3Jar.Frontend/static/js/main.d0a3d8f5.js",
     "static/media/jar.png": "/Web3Jar.Frontend/static/media/jar.2e6b61bf597b50629540.png",
     "static/media/target.svg": "/Web3Jar.Frontend/static/media/target.64125fbf70b27d712fd73d47c9626d08.svg",
     "static/media/collected.svg": "/Web3Jar.Frontend/static/media/collected.715d7b9978b7c7ac5b8f7583d562f9de.svg",
     "static/media/eth.svg": "/Web3Jar.Frontend/static/media/eth.c729bd46b192b8ea53dcc0d30b14ad9e.svg",
     "index.html": "/Web3Jar.Frontend/index.html",
     "main.1e070bcb.css.map": "/Web3Jar.Frontend/static/css/main.1e070bcb.css.map",
-    "main.5932e751.js.map": "/Web3Jar.Frontend/static/js/main.5932e751.js.map"
+    "main.d0a3d8f5.js.map": "/Web3Jar.Frontend/static/js/main.d0a3d8f5.js.map"
   },
   "entrypoints": [
     "static/css/main.1e070bcb.css",
-    "static/js/main.5932e751.js"
+    "static/js/main.d0a3d8f5.js"
   ]
 }
